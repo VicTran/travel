@@ -11,13 +11,13 @@
                         <div class="slider-bottom-menu">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
-                                                                          data-toggle="tab">Hotels</a></li>
-                                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                                                                          data-toggle="tab">Tours</a></li>
+                                <!-- <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
                                                            data-toggle="tab">Tours</a></li>
                                 <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
-                                                           data-toggle="tab">Car rent</a></li>
+                                                           data-toggle="tab">Thuê xe</a></li>
                                 <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
-                                                           data-toggle="tab">Flights</a></li>
+                                                           data-toggle="tab">Chuyến bay</a></li> -->
                             </ul>
                         </div>
                         <div class="tab-content">
@@ -28,38 +28,38 @@
                                             <div class="col-sm-6">
                                                 <p class="name-input-arrow"><input type="text" id="hotel-name-input"
                                                                                    name="hotel-name"
-                                                                                   placeholder="Hotel name here"></p>
+                                                                                   placeholder="Tên khách sạn"></p>
                                             </div>
                                             <div class="col-sm-6">
                                                 <select name="city-select" id="city-select">
-                                                    <option value="1">Choose City</option>
-                                                    <option value="2">City Name - 1</option>
-                                                    <option value="3">City Name - 2</option>
-                                                    <option value="4">City Name - 3</option>
+                                                    <option value="1">Chọn thành phố</option>
+                                                    <option value="2">Thành phố - 1</option>
+                                                    <option value="3">Thành phố - 2</option>
+                                                    <option value="4">Thành phố - 3</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <select name="adults-select" id="adults-select">
-                                                    <option value="1">Adults</option>
-                                                    <option value="2">Yes</option>
-                                                    <option value="3">No</option>
+                                                    <option value="1">Người lớn</option>
+                                                    <option value="2">Có</option>
+                                                    <option value="3">Không</option>
                                                 </select>
                                             </div>
                                             <div class="col-sm-6">
                                                 <select name="kids-select" id="kids-select">
-                                                    <option value="1">Kids</option>
-                                                    <option value="2">Kids - 1</option>
-                                                    <option value="3">Kids - 2</option>
-                                                    <option value="4">Kids - 3</option>
+                                                    <option value="1">Trẻ em</option>
+                                                    <option value="2">Trẻ em - 1</option>
+                                                    <option value="3">Trẻ em - 2</option>
+                                                    <option value="4">Trẻ em - 3</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <select name="min-price-select" id="min-price-select">
-                                                    <option value="1">Min Price</option>
+                                                    <option value="1">Giá nhỏ nhất</option>
                                                     <option value="2">$50</option>
                                                     <option value="3">$50</option>
                                                     <option value="4">$50</option>
@@ -67,7 +67,7 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <select name="max-price-select" id="max-price-select">
-                                                    <option value="1">Max Price</option>
+                                                    <option value="1">Giá lớn nhất</option>
                                                     <option value="2">$25</option>
                                                     <option value="3">$50</option>
                                                     <option value="4">$100</option>
@@ -82,7 +82,7 @@
                                                 <p class="date-input-arrow"><input type="date" name="date"></p>
                                             </div>
                                         </div>
-                                        <button type="submit" class="pink-btn">Find Hotels</button>
+                                        <button type="submit" class="pink-btn">Tìm khách sạn</button>
                                     </form>
                                 </div>
                             </div>
@@ -303,8 +303,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <h1>Top destinations in the world</h1>
-                        <p>Explore a different way to travel</p>
+                        <h1>Top điểm đến được yêu thích</h1>
+                        <p>Khám phá những chân trời mới</p>
                     </div>
                 </div>
             </div>
@@ -357,8 +357,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <h1>The Best Sea Tours</h1>
-                        <p>Explore a different way to travel</p>
+                        <h1>Các tours đi biển tuyệt vời nhất</h1>
+                        <p>Khám phá bãi biển tuyệt đẹp</p>
                     </div>
                 </div>
             </div>
@@ -455,7 +455,7 @@
             </div>
         </div>
 
-        <div class="weekend-europe-area">
+        <!-- <div class="weekend-europe-area">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -467,7 +467,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <div class="padding-bottom footer-top-area">
@@ -526,8 +526,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
-                        <h1>Our Client Speech</h1>
-                        <p>Explore a different way to travel</p>
+                        <h1>Phản hồi khách hàng</h1>
+                        <!-- <p>Explore a different way to travel</p> -->
                     </div>
                 </div>
             </div>
