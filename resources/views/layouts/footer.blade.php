@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-6">
                 <div class="footer-widget para-widget">
-                    <img src="assets/img/footer-logo.png" class="footer-logo" alt="">
+                    <img src="{{asset('assets/img/footer-logo.png')}}" class="footer-logo" alt="">
                     <p>Công ty du lịch abcxyz là hãng du lịch lâu năm với
                     nhiều uy tín. Chuyên phục vụ các chuyến tours rẻ và chất lượng
                     mang đến sự hài lòng cho khách hàng.</p>

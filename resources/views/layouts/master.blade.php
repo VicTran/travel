@@ -40,9 +40,9 @@
 
 
 <!--jquery.min.js-->
-<script src="assets/js/jquery.min.js"></script>
+<script src="{{asset('assets/js/jquery.min.js')}}"></script>
 <!--bootstrap.min.js-->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
 <!--owl.carousel.min.js-->
 
 <script src="{{asset('js/owl.carousel.min.js')}}"></script>

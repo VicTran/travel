@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-md-2 col-sm-4 col-xs-6">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+                        <a href="index.html"><img src="{{asset('assets/img/logo.png')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-8">
@@ -105,7 +105,7 @@
     </div>
 
     <div class="slider-area slider-area-hp1 owl-carousel text-center">
-        <div class="single-slide-item hp1-slider-bg1" data-dot="<img src='assets/img/hp1-slider-small1.jpg' alt=''>">
+        <div class="single-slide-item hp1-slider-bg1" data-dot="<img src='{{asset('assets/img/hp1-slider-small1.jpg')}}' alt=''>">
             <div class="single-slide-item-table-cell">
                 <div class="container">
                     <div class="row">
@@ -118,7 +118,7 @@
                 </div>
             </div>
         </div>
-        <div class="single-slide-item hp1-slider-bg2" data-dot="<img src='assets/img/hp1-slider-small2.jpg' alt=''>">
+        <div class="single-slide-item hp1-slider-bg2" data-dot="<img src='{{asset('assets/img/hp1-slider-small2.jpg')}}' alt=''>">
             <div class="single-slide-item-table-cell">
                 <div class="container">
                     <div class="row">
@@ -131,7 +131,7 @@
                 </div>
             </div>
         </div>
-        <div class="single-slide-item hp1-slider-bg3" data-dot="<img src='assets/img/hp1-slider-small3.jpg' alt=''>">
+        <div class="single-slide-item hp1-slider-bg3" data-dot="<img src='{{asset('assets/img/hp1-slider-small3.jpg')}}' alt=''>">
             <div class="single-slide-item-table-cell">
                 <div class="container">
                     <div class="row">
