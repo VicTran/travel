@@ -11,12 +11,12 @@
                             <div class="single-sea-tours-item">
                                 <div class="single-sea-tours-image single-sea-tours-image1 black-overlay ">
                                     <a href="#" class="pink-btn">$1500</a>
-                                    <h2>South America</h2>
+                                    <h2>Nam Mỹ</h2>
                                 </div>
                                 <div class="single-sea-tours-text">
-                                    <h5>South America - 5 Days in Lake Tahoe</h5>
+                                    <h5>Nam Mỹ - 5 ngày ở hồ Tahoe</h5>
                                     <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 Days</a>
+                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 ngàys</a>
                                     </span>
                                     <span class="post-review-stars">
                                         <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
@@ -33,12 +33,12 @@
                             <div class="single-sea-tours-item">
                                 <div class="single-sea-tours-image single-sea-tours-image2 black-overlay">
                                     <a href="#" class="pink-btn">$1500</a>
-                                    <h2>South America</h2>
+                                    <h2>Nam Mỹ</h2>
                                 </div>
                                 <div class="single-sea-tours-text">
-                                    <h5>South America - 5 Days in Lake Tahoe</h5>
+                                    <h5>Nam Mỹ - 5 ngày ở hồ Tahoe</h5>
                                     <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 Days</a>
+                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 ngày</a>
                                     </span>
                                     <span class="post-review-stars">
                                         <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
@@ -55,12 +55,12 @@
                             <div class="single-sea-tours-item">
                                 <div class="single-sea-tours-image single-sea-tours-image3 black-overlay">
                                     <a href="#" class="pink-btn">$1500</a>
-                                    <h2>South America</h2>
+                                    <h2>Nam Mỹ</h2>
                                 </div>
                                 <div class="single-sea-tours-text">
-                                    <h5>South America - 5 Days in Lake Tahoe</h5>
+                                    <h5>Nam Mỹ- 5 ngày ở hồ Tahoe</h5>
                                     <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 Days</a>
+                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 ngày</a>
                                     </span>
                                     <span class="post-review-stars">
                                         <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
@@ -83,12 +83,12 @@
                             <div class="single-sea-tours-item">
                                 <div class="single-sea-tours-image single-sea-tours-image1 black-overlay ">
                                     <a href="#" class="pink-btn">$1500</a>
-                                    <h2>South America</h2>
+                                    <h2>Nam Mỹ</h2>
                                 </div>
                                 <div class="single-sea-tours-text">
-                                    <h5>South America - 5 Days in Lake Tahoe</h5>
+                                    <h5>Nam Mỹ - 5 ngày ở hồ Tahoe</h5>
                                     <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 Days</a>
+                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 ngày</a>
                                     </span>
                                     <span class="post-review-stars">
                                         <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
@@ -105,12 +105,12 @@
                             <div class="single-sea-tours-item">
                                 <div class="single-sea-tours-image single-sea-tours-image2 black-overlay">
                                     <a href="#" class="pink-btn">$1500</a>
-                                    <h2>South America</h2>
+                                    <h2>Nam Mỹ</h2>
                                 </div>
                                 <div class="single-sea-tours-text">
-                                    <h5>South America - 5 Days in Lake Tahoe</h5>
+                                    <h5>Nam Mỹ- 5 ngày ở hồ Tahoe</h5>
                                     <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 Days</a>
+                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 ngày</a>
                                     </span>
                                     <span class="post-review-stars">
                                         <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
@@ -127,12 +127,12 @@
                             <div class="single-sea-tours-item">
                                 <div class="single-sea-tours-image single-sea-tours-image3 black-overlay">
                                     <a href="#" class="pink-btn">$1500</a>
-                                    <h2>South America</h2>
+                                    <h2>Nam Mỹ</h2>
                                 </div>
                                 <div class="single-sea-tours-text">
-                                    <h5>South America - 5 Days in Lake Tahoe</h5>
+                                    <h5>Nam Mỹ - 5 ngày ở hồ Tahoe</h5>
                                     <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 Days</a>
+                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 ngày</a>
                                     </span>
                                     <span class="post-review-stars">
                                         <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
@@ -155,10 +155,10 @@
                             <div class="single-sea-tours-item">
                                 <div class="single-sea-tours-image single-sea-tours-image1 black-overlay ">
                                     <a href="#" class="pink-btn">$1500</a>
-                                    <h2>South America</h2>
+                                    <h2>Nam Mỹ</h2>
                                 </div>
                                 <div class="single-sea-tours-text">
-                                    <h5>South America - 5 Days in Lake Tahoe</h5>
+                                    <h5>Nam Mỹ - 5 ngày ở hồ Tahoe</h5>
                                     <span class="post-day-count">
                                         <a href="#"><i class="zmdi zmdi-time"></i> 5 Days</a>
                                     </span>
@@ -177,12 +177,12 @@
                             <div class="single-sea-tours-item">
                                 <div class="single-sea-tours-image single-sea-tours-image2 black-overlay">
                                     <a href="#" class="pink-btn">$1500</a>
-                                    <h2>South America</h2>
+                                    <h2>Nam Mỹ</h2>
                                 </div>
                                 <div class="single-sea-tours-text">
-                                    <h5>South America - 5 Days in Lake Tahoe</h5>
+                                    <h5>Nam Mỹ - 5 ngày ở hồ Tahoe</h5>
                                     <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 Days</a>
+                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 ngày</a>
                                     </span>
                                     <span class="post-review-stars">
                                         <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
@@ -199,12 +199,12 @@
                             <div class="single-sea-tours-item">
                                 <div class="single-sea-tours-image single-sea-tours-image3 black-overlay">
                                     <a href="#" class="pink-btn">$1500</a>
-                                    <h2>South America</h2>
+                                    <h2>Nam Mỹ</h2>
                                 </div>
                                 <div class="single-sea-tours-text">
-                                    <h5>South America - 5 Days in Lake Tahoe</h5>
+                                    <h5>Nam Mỹ - 5 ngày ở hồ Tahoe</h5>
                                     <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 Days</a>
+                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 ngày</a>
                                     </span>
                                     <span class="post-review-stars">
                                         <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
