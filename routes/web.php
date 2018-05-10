@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +17,21 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('home');
 Route::get('/tour', 'TourController@index')->name('tour');
 Route::get('/tour/detail', 'TourController@dd')->name('tour-detail');
+Route::group(['prefix' => 'admin'], function () {
+
+    Route::group(['prefix' => 'tours'], function() {
+        Route::get('/', ['as' => 'tour.index', 'uses' => 'TuorDetailController@index']);
+        Route::get('/create', ['as' => 'tour.create', 'uses' => 'TuorDetailController@create']);
+        Route::get('/create', ['as' => 'tour.create', 'uses' => 'TuorDetailController@create']);
+        Route::post('/', ['as' => 'tour.store', 'uses' => 'TuorDetailController@store']);
+        Route::get('/edit/{id}', ['as' => 'tour.edit', 'uses' => 'TuorDetailController@edit']);
+
+
+    });
+});
+
+
+

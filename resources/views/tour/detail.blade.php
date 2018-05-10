@@ -7,7 +7,7 @@
         <!--page-welcome-area start -->
         <!--tours-details-area-content start -->
         <div class="tours-details-area-content section-padding">
-            <div class="container">
+            <div class="container">aaa
                 <div class="row">
                     <div class="col-md-8">
                         <div class="tours-details-content-left">
