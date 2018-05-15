@@ -28,7 +28,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/create', ['as' => 'tour.create', 'uses' => 'TuorDetailController@create']);
         Route::post('/', ['as' => 'tour.store', 'uses' => 'TuorDetailController@store']);
         Route::get('/edit/{id}', ['as' => 'tour.edit', 'uses' => 'TuorDetailController@edit']);
-
+        Route::get('/delete/{id}', ['as' => 'tour.delete', 'uses' => 'TuorDetailController@destroy']);
 
     });
 });

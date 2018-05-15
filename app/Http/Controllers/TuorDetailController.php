@@ -126,8 +126,21 @@ class TuorDetailController extends Controller
      * @param  \App\TuorDetail  $tuorDetail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TuorDetail $tuorDetail)
+    public function destroy($id)
     {
-        //
+        try {
+            DB::beginTransaction();
+            TuorDetail::destroy($id);
+//            DB::table('product_stores')->where('product_id', $id)->delete();
+//            DB::table('prices')->where('product_id', $id)->delete();
+//            DB::table('variation_details')->where('product_id', $id)->delete();
+//            DB::table('product_images')->where('product_id', $id)->delete();
+            DB::commit();
+        } catch (\Exception $e) {
+            DB::rollback();
+            echo $e;
+        }
+        return redirect(route('tour.index'));
     }
+
 }
