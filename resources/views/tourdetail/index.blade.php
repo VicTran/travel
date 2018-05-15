@@ -68,9 +68,9 @@
                                         </a>
                                     </td>
                                     <td >
-                                        <div class="btn btn-block btn-danger btn-sm">
+                                        <a href="{{route('tour.delete', ['id' => $tour->id])}}" onclick="return confirm_messages('Are you sure delete?')" class="btn btn-block btn-danger btn-sm">
                                             <i class="fa fa-remove"></i>
-                                        </div>
+                                        </a>
                                     </td>
                                 </tr>
                             @endforeach
