@@ -14,7 +14,7 @@
 @stop
 
 @section('content')
-    <form class="form" method="POST" action="{{route('tour.store')}}" enctype="multipart/form-data">
+    <form class="form" method="POST" action="{{route('tour.update',['id'=>$tour->id])}}" enctype="multipart/form-data">
         {{ csrf_field() }}
 
         <div class="box box-info">
@@ -41,7 +41,8 @@
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                         </div>
-                        <input type="text" class="form-control pull-right" id="datepicker" value="{{$tour->c}}">
+                        <input type="text" name="start_date" class="form-control pull-right" id="datepicker"
+                               value="{{$tour->date_start}}">
                     </div>
                     <!-- /.input group -->
                 </div>
@@ -68,10 +69,10 @@
                         <div id="option_product" class="container col-md-12">
                             <ul class="nav nav-tabs">
                                 <li class="active">
-                                    <a href="#description" data-toggle="tab"> Description </a>
+                                    <a href="#description" data-toggle="tab" class="hidden"> Description </a>
                                 </li>
                                 <li>
-                                    <a href="#detail" data-toggle="tab"> Detail </a>
+                                    <a href="#detail" data-toggle="tab" class="hidden"> Detail </a>
                                 </li>
                                 <li>
                                     <a href="#spec" data-toggle="tab"> Specs </a>
@@ -80,12 +81,12 @@
                                     <a href="#images" data-toggle="tab"> Image </a>
                                 </li>
                                 <li>
-                                    <a href="#seo" data-toggle="tab"> SEO </a>
+                                    <a href="#seo" data-toggle="tab" class="hidden"> SEO </a>
                                 </li>
                             </ul>
 
                             <div class="tab-content col-md-12 clearfix">
-                                <div class="tab-pane active" id="description">
+                                <div class="tab-pane" id="description">
                                     <div class="description_language">
                                         <div class="col-md-12">
                                             <h4> Description </h4>
@@ -106,11 +107,12 @@
 
                                 </div>
 
-                                <div class="tab-pane" id="spec">
+                                <div class="tab-pane active" id="spec">
                                     <div class="specs">
                                         <div class="col-md-12">
                                             <h4> Tab Specs </h4>
-                                            <textarea name="txtContent" class="form-control " id="editor1" >{{$tour->content}}</textarea>
+                                            <textarea name="txtContent" class="form-control "
+                                                      id="editor1">{{$tour->content}}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -118,15 +120,31 @@
                                     <div class="col-md-6">
                                         <div class="form-group product_image">
                                             <label>Product Images</label>
+                                            <img src="{{url(''.$tour->image.'')}}" alt="{{$tour->image}}" width="150"
+                                                 height="150"> <br/><br/>
                                             <input type="file" name="image"> <br/>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group images">
                                             <label>Images Detail</label>
+                                            @foreach($tour_images as $tour_image)
+                                                <div class="image_detail" data-image-id="{{$tour_image->id}}" id="image_detail_{{$tour_image->id}}">
+                                                    <img src="{{url(''.$tour_image->path.'')}}"
+                                                         alt="{{url(''.$tour_image->path.'')}}" width="150"
+                                                         height="150">
+
+                                                    <button type="button"
+                                                            onclick="return confirm('are you delete this image?')"
+                                                            class="btn btn-danger delete_image"><i
+                                                                class="fa fa-times-circle"></i></button>
+                                                </div>
+
+                                            @endforeach
                                             <input type="file" name="fImages[]"> <br/>
                                         </div>
-                                        <button type="button" class="btn btn-primary add_image"><i class="fa fa-plus"></i>
+                                        <button type="button" class="btn btn-primary add_image"><i
+                                                    class="fa fa-plus"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -135,18 +153,21 @@
                                     <div class="col-md-12">
                                         <div class="sectionseparate" id="sectionseos">
                                             <h3>Search engine listing preview</h3>
-                                            <p>Add a description to see how this collection might appear in a search engine
+                                            <p>Add a description to see how this collection might appear in a search
+                                                engine
                                                 listing.</p>
                                             <hr>
                                             <div class="ui-form__label-wrapper">
                                                 <label class="next-label" for="seo-title-tag">Meta title</label>
                                                 <span class="type--subdued" bind="titleCharsRemainingText()"> 0 of 70 characters used</span>
                                             </div>
-                                            <input name="meta_title" class="form-control" autofocus="autofocus" type="text"
+                                            <input name="meta_title" class="form-control" autofocus="autofocus"
+                                                   type="text"
                                                    value="{{old('meta_title')}}">
                                             <br>
                                             <div class="ui-form__label-wrapper">
-                                                <label class="next-label" for="seo-description-tag">Meta description</label>
+                                                <label class="next-label" for="seo-description-tag">Meta
+                                                    description</label>
                                                 <span class="type--subdued" bind="descriptionCharsRemainingText()"> 0 of 160 characters used</span>
                                             </div>
                                             <textarea name="meta_description"
@@ -156,7 +177,8 @@
                                                 <label class="next-label" for="object-handle">URL and handle</label>
                                             </div>
                                             <div class="input-group"><span class="urlandhandle input-group-addon">http://etordev.life/products/</span>
-                                                <input name="slug" class="form-control" type="text" value="{{old('slug')}}">
+                                                <input name="slug" class="form-control" type="text"
+                                                       value="{{old('slug')}}">
                                             </div>
                                             <br>
                                         </div>
@@ -170,11 +192,10 @@
                     <!-- /.box-body -->
                 </div>
             </div>
-        </div>
-
-        <div class="col-md-8">
-            <button type="submit" class="btn btn-success">Create</button>
-            <a type="button" class="btn btn-primary" href="{{route('tour.index')}}">Cancel</a>
+            <div class="col-md-8 col-md-offset-4">
+                <button type="submit" class="btn btn-success btn-lg">Update</button>
+                <a type="button" class="btn btn-primary btn-lg" href="{{route('tour.index')}}">Cancel</a>
+            </div>
         </div>
     </form>
 @stop
@@ -189,16 +210,39 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
     <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
     <script>
-        $('#datepicker').datepicker({
-            autoclose: true
-        });
-        $(document).ready(function () {
-            $('.summernote').summernote({
-                placeholder: 'dien thong tin',
-                height: 500,
+        $('document').ready(function () {
+            $('.add_image').click(function () {
+                $('.images').append('<input type="file" name="fImages[]"><br/>');
             });
+            $('.delete_image').click(function () {
+                // /confirm('are you delete this image?');
+                $(this).closest('.image_detail').hide();
+
+                $.ajax({
+                    url: 'remove/img',
+                    type: 'POST',
+                    data: {
+                        _token: $('input[name="_token"]').val(),
+                        tour_image: $(this).closest('.image_detail').find('img').attr('src'),
+                        tour_image_id: $(this).closest('.image_detail').attr('data-image-id')
+                    },
+                    success: function (data) {
+                        if (data) {
+                            $(this).closest('.image_detail').remove();
+                        }
+                    },
+                    error: function () {
+                    }
+                })
+
+            })
         });
-        CKEDITOR.replace('editor1',{
+
+        $('#datepicker').datepicker({
+            autoclose: true,
+            format: 'yyyy-mm-dd'
+        });
+        CKEDITOR.replace('editor1', {
             filebrowserBrowseUrl: '{{ asset('ckfinder/ckfinder.html') }}',
             filebrowserImageBrowseUrl: '{{ asset('ckfinder/ckfinder.html?type=Images') }}',
             filebrowserFlashBrowseUrl: '{{ asset('ckfinder/ckfinder.html?type=Flash') }}',
@@ -206,7 +250,5 @@
             filebrowserImageUploadUrl: '{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
             filebrowserFlashUploadUrl: '{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}'
         });
-
-
     </script>
 @stop

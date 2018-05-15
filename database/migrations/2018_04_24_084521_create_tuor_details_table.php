@@ -19,6 +19,7 @@ class CreateTuorDetailsTable extends Migration
             $table->string('starting_point')->nullable();
             $table->integer('price')->nullable();
             $table->longText('content')->nullable();
+            $table->date('date_start')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

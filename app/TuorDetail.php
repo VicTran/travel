@@ -10,18 +10,31 @@ class TuorDetail extends Model
         'name',
         'starting_point',
         'price',
-        'content'
+        'content',
+        'start_date'
     ];
 
     public function saveTourDetail($tour)
     {
         $this->name = $tour['name'];
-        $this->starting_point = $tour['name'];
+        $this->starting_point = $tour['starting_point'];
         $this->price = $tour['price'];
-        $this->content = $tour['description_default'];
+        $this->content = $tour['txtContent'];
+        $this->date_start = $tour['start_date'];
         $this->save();
         return $this->id;
     }
+
+    public function updateTourDetail($tour){
+        $this->name = $tour['name'];
+        $this->starting_point = $tour['starting_point'];
+        $this->price = $tour['price'];
+        $this->content = $tour['txtContent'];
+        $this->date_start = $tour['start_date'];
+        $this->save();
+        return true;
+    }
+
 
 
 }

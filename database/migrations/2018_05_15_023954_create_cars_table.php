@@ -15,9 +15,12 @@ class CreateCarsTable extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('price');
-            $table->string('star');
             $table->string('name');
+            $table->string('star');
+            $table->string('number_people');
+            $table->string('cary_bag');
+            $table->date('date');
+            $table->integer('price');
             $table->string('description');
             $table->string('image_detail_src');
             $table->string('image_src');

@@ -151,6 +151,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Socieboy\Alerts\AlertServiceProvider::class,
 
         /*
          * Application Service Providers...

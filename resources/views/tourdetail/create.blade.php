@@ -42,7 +42,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                         </div>
-                        <input type="text" class="form-control pull-right" id="datepicker">
+                        <input type="text" class="form-control pull-right" id="datepicker" name="start_date">
                     </div>
                     <!-- /.input group -->
                 </div>
@@ -68,14 +68,14 @@
                     <div class="box-body">
                         <div id="option_product" class="container col-md-12">
                             <ul class="nav nav-tabs">
-                                <li class="active">
+                                <li >
                                     <a href="#description" data-toggle="tab" class="hidden"> Description </a>
                                 </li>
                                 <li>
                                     <a href="#detail" data-toggle="tab" class="hidden"> Detail </a>
                                 </li>
-                                <li>
-                                    <a href="#spec" data-toggle="tab" > Specs </a>
+                                <li class="active">
+                                    <a href="#spec" data-toggle="tab"  > Specs </a>
                                 </li>
                                 <li>
                                     <a href="#images" data-toggle="tab"> Image </a>
@@ -86,7 +86,7 @@
                             </ul>
 
                             <div class="tab-content col-md-12 clearfix">
-                                <div class="tab-pane active" id="description">
+                                <div class="tab-pane" id="description">
                                     <div class="description_language">
                                         <div class="col-md-12">
                                             <h4> Description </h4>
@@ -107,7 +107,7 @@
 
                                 </div>
 
-                                <div class="tab-pane" id="spec">
+                                <div class="tab-pane active" id="spec">
                                     <div class="specs">
                                         <div class="col-md-12">
                                             <h4> Tab Specs </h4>
@@ -176,15 +176,16 @@
                     <!-- /.box-body -->
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="box-footer">
-                <div class="col-md-8">
-                    <button type="submit" class="btn btn-success">Create</button>
-                    <a type="button" class="btn btn-primary" href="{{route('tour.index')}}">Cancel</a>
+            <div class="row">
+                <div class="box-footer">
+                    <div class="col-md-8 col-md-offset-4">
+                        <button type="submit" class="btn btn-success btn-lg">Create</button>
+                        <a type="button" class="btn btn-primary btn-lg" href="{{route('tour.index')}}">Cancel</a>
+                    </div>
                 </div>
             </div>
         </div>
+
     </form>
 @stop
 
@@ -199,13 +200,8 @@
     <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
     <script>
         $('#datepicker').datepicker({
-            autoclose: true
-        });
-        $(document).ready(function () {
-            $('.summernote').summernote({
-                placeholder: 'dien thong tin',
-                height: 500,
-            });
+            autoclose: true,
+            format: 'yyyy-mm-dd'
         });
         CKEDITOR.replace('editor1', {
             filebrowserBrowseUrl: '{{ asset('ckfinder/ckfinder.html') }}',

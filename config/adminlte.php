@@ -121,12 +121,18 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
+        [
+            'text'        => 'Customer',
+            'url'         => 'admin/customers',
+            'icon'        => 'user',
+            'label_color' => 'success',
+        ],
         
         'ACCOUNT SETTINGS',
         [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
+            'text' => 'Car',
+            'url'  => 'admin/cars',
+            'icon' => 'car',
         ],
         [
             'text' => 'Change Password',
