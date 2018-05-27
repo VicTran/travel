@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Danh sách tour ')
+@section('title', 'List hotel ')
 @section('css')
     <link rel="stylesheet" href="{{asset('css/admin_custom.css')}}">
 
@@ -8,13 +8,13 @@
 @stop
 
 @section('content_header')
-        <h1>
-            Danh sách tour
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Danh sách tour</li>
-        </ol>
+    <h1>
+        List hotel
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">List hotel</li>
+    </ol>
 @stop
 
 @section('content')
@@ -22,12 +22,13 @@
     <section class="content">
         <div class="row">
             <div class="col-xs-12" style="padding-bottom: 5px;">
-                <a href="{{route('tour.create')}}" class="col-xs-2 btn btn-success btn-lg pull-right"> Tạo mới </a>
+                <a href="{{route('hotel.create')}}" class="col-xs-2 btn btn-success btn-lg pull-right"> Tạo mới </a>
             </div>
             <div class="col-xs-12">
+                @if(count($hotels) > 0)
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Danh sách tuor</h3>
+                        <h3 class="box-title">List hotel</h3>
 
                     </div>
                     <!-- /.box-header -->
@@ -36,39 +37,43 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Tên tour</th>
-                                <th>Giá tour</th>
-                                <th>Sô ngày </th>
-                                <th>Địa điểm xuất phát</th>
-                                <th>Chinh sua</th>
-                                <th>Xoa</th>
+                                <th>Hotel Name</th>
+                                <th>Price</th>
+                                <th>Address </th>
+                                <th>Phone</th>
+                                <th>Create at</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach ($tours as $tour)
+                            @foreach ($hotels as $hotel)
                                 <tr>
                                     <td>
-                                        {{$tour->id}}
+                                        {{$hotel->id}}
                                     </td>
                                     <td>
-                                        {{$tour->name}}
+                                        {{$hotel->name}}
                                     </td>
                                     <td>
-                                        {{$tour->price}}
+                                        {{$hotel->price}}
                                     </td>
                                     <td>
-                                        {{$tour->starting_point}}
+                                        {{$hotel->address}}
                                     </td>
                                     <td>
-                                        {{$tour->created_at}}
+                                        {{$hotel->phone}}
                                     </td>
                                     <td>
-                                        <a href="{{route('tour.edit',['id' => $tour->id])}}" class="btn btn-block btn-info btn-sm">
+                                        {{$hotel->created_at}}
+                                    </td>
+                                    <td>
+                                        <a href="{{route('hotel.edit',['id' => $hotel->id])}}" class="btn btn-block btn-info btn-sm">
                                             <i class="fa fa-edit"></i>Chinh sua
                                         </a>
                                     </td>
                                     <td >
-                                        <a href="{{route('tour.delete', ['id' => $tour->id])}}" onclick="return confirm('Are you sure delete?')" class="btn btn-block btn-danger btn-sm">
+                                        <a href="{{route('hotel.delete', ['id' => $hotel->id])}}" onclick="return confirm('Are you sure delete?')" class="btn btn-block btn-danger btn-sm">
                                             <i class="fa fa-remove"></i>
                                         </a>
                                     </td>
@@ -79,11 +84,14 @@
                     </div>
                     <div class="box-footer">
                         <div class="col-lg-offset-4">
-                            {{ $tours->links() }}
+                            {{ $hotels->links() }}
                         </div>
                     </div>
                     <!-- /.box-body -->
                 </div>
+                @else
+                    <div><h1> Sorry, no hotels </h1></div>
+                @endif
             </div>
             <!-- /.col -->
         </div>

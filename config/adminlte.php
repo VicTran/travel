@@ -135,6 +135,11 @@ return [
             'icon' => 'car',
         ],
         [
+            'text' => 'Hotel',
+            'url'  => 'admin/hotels',
+            'icon' => 'hotel',
+        ],
+        [
             'text' => 'Change Password',
             'url'  => 'admin/settings',
             'icon' => 'lock',

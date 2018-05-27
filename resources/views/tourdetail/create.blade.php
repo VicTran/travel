@@ -55,6 +55,21 @@
                         <span class="input-group-addon">VND</span>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label>Cartegory Tour</label>
+                    <select class="form-control" name="cartegory_tour">
+                        <option value="1"> Sea </option>
+                        <option value="2">Mountain</option>
+                        <option value="3">ity</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Number booking:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"> <span class="fa fa-user"></span></span>
+                        <input name="number_booking" type="number" class="form-control">
+                    </div>
+                </div>
             </div>
             <!-- /.box-body -->
         </div>

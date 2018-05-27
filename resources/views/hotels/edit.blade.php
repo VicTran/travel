@@ -1,20 +1,20 @@
 @extends('adminlte::page')
 
-@section('title', 'Tạo tour')
+@section('title', 'Create Hotel')
 
 @section('content_header')
     <h1>
-        Danh sách tour
+        Create Hotel
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="{{ route('tour.index') }}"><i class="fa fa-dashboard"></i> Danh sách tour</a></li>
-        <li class="active">Tạo tour</li>
+        <li><a href="{{ route('hotel.index') }}"><i class="fa fa-dashboard"></i> List Hotel</a></li>
+        <li class="active">Create Hotel</li>
     </ol>
 @stop
 
 @section('content')
-    <form class="form" method="POST" action="{{route('tour.update',['id'=>$tour->id])}}" enctype="multipart/form-data">
+    <form class="form" method="POST" action="{{route('hotel.update',['id'=>$hotel->id])}}" enctype="multipart/form-data">
         {{ csrf_field() }}
 
         <div class="box box-info">
@@ -26,49 +26,125 @@
 
                 <!-- text input -->
                 <div class="form-group">
-                    <label>Tên tour</label>
-                    <input name="name" type="text" class="form-control" value="{{$tour->name}}">
+                    <label>Hotel Name :</label>
+                    <input name="name" type="text" class="form-control"
+                           placeholder=" Amasya Hotel ....." value="{{$hotel->name}}">
                 </div>
                 <div class="form-group">
-                    <label>Địa điểm xuất phat</label>
-                    <input name="starting_point" type="text" class="form-control"
-                           value="{{$tour->starting_point}}">
+                    <label>Star :</label>
+                    <input name="star" type="number" class="form-control"
+                           placeholder="input star" value="{{$hotel->star}}">
                 </div>
                 <div class="form-group">
-                    <label>Ngày xuất phát:</label>
+                    <label>Price :</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input name="price" type="number" class="form-control"
+                               placeholder="Input price ......" value="{{$hotel->price}}">
+                        <span class="input-group-addon">USD</span>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
 
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <h3 class="box-title">General Address</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label>Address : </label>
+                    <div class="input-group date">
+                        <div class="input-group-addon">
+                            <i class="fa fa-address-book"></i>
+                        </div>
+                        <input type="text" class="form-control pull-right" name="address" value="{{$hotel->address}}">
+                    </div>
+                </div>
+
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Phone Number : </label>
+                    <input name="phone" type="number" class="form-control"
+                           placeholder="" value="{{$hotel->phone}}">
+                </div>
+                <div class="form-group">
+                    <label>Email :</label>
+                    <input name="email" type="email" class="form-control"
+                           placeholder="" value="{{$hotel->email}}">
+                </div>
+                <div class="form-group">
+                    <label> Web address :</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-wechat"></i>
+                        </span>
+                        <input name="web_address" type="text" class="form-control"
+                               placeholder="" value="{{$hotel->web_address}}">
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+
+        <div class="box box-comment">
+            <div class="box-header with-border">
+                <h3 class="box-title">Detail Hotel</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label>Date : </label>
                     <div class="input-group date">
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                         </div>
-                        <input type="text" name="start_date" class="form-control pull-right" id="datepicker"
-                               value="{{$tour->date_start}}">
-                    </div>
-                    <!-- /.input group -->
-                </div>
-                <div class="form-group">
-                    <label>Gia tour:</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">$</span>
-                        <input name="price" type="number" class="form-control"
-                               value="{{$tour->price}}">
-                        <span class="input-group-addon">VND</span>
+                        <input type="text" class="form-control pull-right" id="datepicker" name="date" value="{{$hotel->date}}">
                     </div>
                 </div>
+
+                <!-- text input -->
                 <div class="form-group">
-                    <label>Cartegory Tour</label>
-                    <select class="form-control" name="cartegory_tour">
-                        <option value="1" @if($tour->cartegory_tour ==1 ) selected @endif> Sea </option>
-                        <option value="2" @if($tour->cartegory_tour ==2 ) selected @endif>Mountain</option>
-                        <option value="3" @if($tour->cartegory_tour ==3 ) selected @endif>ity</option>
+                    <label>People Number : </label>
+                    <input name="number_people" type="number" class="form-control"
+                           placeholder="" value="{{$hotel->number_people}}">
+                </div>
+                <div class="form-group">
+                    <label>Hotel Class :</label>
+                    <input name="hotel_class" type="number" class="form-control"
+                           placeholder="" value="{{$hotel->hotel_class}}">
+                </div>
+                <div class="form-group">
+                    <label>Cable Tv :</label>
+                    <select class="form-control" name="cable_tv">
+                        <option value="1" @if($hotel->cable_tv == 1) selected @endif>Yes</option>
+                        <option value="2" @if($hotel->cable_tv == 2) selected @endif>No</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Number booking:</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"> <span class="fa fa-user"></span></span>
-                        <input name="number_booking" type="number" value="{{$tour->number_booking}}" class="form-control">
-                    </div>
+                    <label>Telephone :</label>
+                    <select class="form-control" name="telephone_service">
+                        <option value="1" @if($hotel->telephone_service == 1) selected @endif>Yes</option>
+                        <option value="2" @if($hotel->telephone_service == 2) selected @endif>No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Room Service :</label> {{$hotel->room_service}}
+                    <select class="form-control" name="room_service">
+                        <option value="1" @if($hotel->room_service == 1) active @endif>Included</option>
+                        <option value="2" @if($hotel->room_service == 2) selected @endif>No Included</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Cancellation :</label>
+                    <select class="form-control" name="cancellation">
+                        <option value="1" @if($hotel->cancellation == 1) selected @endif>Strict</option>
+                        <option value="2" @if($hotel->cancellation == 2) selected @endif>Included</option>
+                    </select>
                 </div>
             </div>
             <!-- /.box-body -->
@@ -83,14 +159,14 @@
                     <div class="box-body">
                         <div id="option_product" class="container col-md-12">
                             <ul class="nav nav-tabs">
-                                <li class="active">
+                                <li >
                                     <a href="#description" data-toggle="tab" class="hidden"> Description </a>
                                 </li>
                                 <li>
                                     <a href="#detail" data-toggle="tab" class="hidden"> Detail </a>
                                 </li>
-                                <li>
-                                    <a href="#spec" data-toggle="tab"> Specs </a>
+                                <li class="selected">
+                                    <a href="#spec" data-toggle="tab"  > Description </a>
                                 </li>
                                 <li>
                                     <a href="#images" data-toggle="tab"> Image </a>
@@ -125,37 +201,23 @@
                                 <div class="tab-pane active" id="spec">
                                     <div class="specs">
                                         <div class="col-md-12">
-                                            <h4> Tab Specs </h4>
-                                            <textarea name="txtContent" class="form-control "
-                                                      id="editor1">{{$tour->content}}</textarea>
+                                            <h4> Description </h4>
+                                            <textarea name="description" class="form-control " id="editor1">{{$hotel->description}}</textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="images">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group product_image">
-                                            <label>Product Images</label>
-                                            <img src="{{url(''.$tour->image.'')}}" alt="{{$tour->image}}" width="150"
+                                            <label>Hotel Images</label><br>
+                                            <img src="{{url(''.$hotel->img.'')}}" alt="{{$hotel->img}}" width="150"
                                                  height="150"> <br/><br/>
-                                            <input type="file" name="image"> <br/>
+                                            <input type="file" name="img"> <br/>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6" hidden>
                                         <div class="form-group images">
                                             <label>Images Detail</label>
-                                            @foreach($tour_images as $tour_image)
-                                                <div class="image_detail" data-image-id="{{$tour_image->id}}" id="image_detail_{{$tour_image->id}}">
-                                                    <img src="{{url(''.$tour_image->path.'')}}"
-                                                         alt="{{url(''.$tour_image->path.'')}}" width="150"
-                                                         height="150">
-
-                                                    <button type="button"
-                                                            onclick="return confirm('are you delete this image?')"
-                                                            class="btn btn-danger delete_image"><i
-                                                                class="fa fa-times-circle"></i></button>
-                                                </div>
-
-                                            @endforeach
                                             <input type="file" name="fImages[]"> <br/>
                                         </div>
                                         <button type="button" class="btn btn-primary add_image"><i
@@ -207,11 +269,16 @@
                     <!-- /.box-body -->
                 </div>
             </div>
-            <div class="col-md-8 col-md-offset-4">
-                <button type="submit" class="btn btn-success btn-lg">Update</button>
-                <a type="button" class="btn btn-primary btn-lg" href="{{route('tour.index')}}">Cancel</a>
+            <div class="row">
+                <div class="box-footer">
+                    <div class="col-md-8 col-md-offset-4">
+                        <button type="submit" class="btn btn-success btn-lg">Update</button>
+                        <a type="button" class="btn btn-primary btn-lg" href="{{route('hotel.index')}}">Cancel</a>
+                    </div>
+                </div>
             </div>
         </div>
+
     </form>
 @stop
 
@@ -225,34 +292,6 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
     <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
     <script>
-        $('document').ready(function () {
-            $('.add_image').click(function () {
-                $('.images').append('<input type="file" name="fImages[]"><br/>');
-            });
-            $('.delete_image').click(function () {
-                // /confirm('are you delete this image?');
-                $(this).closest('.image_detail').hide();
-
-                $.ajax({
-                    url: 'remove/img',
-                    type: 'POST',
-                    data: {
-                        _token: $('input[name="_token"]').val(),
-                        tour_image: $(this).closest('.image_detail').find('img').attr('src'),
-                        tour_image_id: $(this).closest('.image_detail').attr('data-image-id')
-                    },
-                    success: function (data) {
-                        if (data) {
-                            $(this).closest('.image_detail').remove();
-                        }
-                    },
-                    error: function () {
-                    }
-                })
-
-            })
-        });
-
         $('#datepicker').datepicker({
             autoclose: true,
             format: 'yyyy-mm-dd'
@@ -265,5 +304,11 @@
             filebrowserImageUploadUrl: '{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
             filebrowserFlashUploadUrl: '{{ asset('ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}'
         });
+
+        $('document').ready(function() {
+            $('.add_image').click(function(){
+                $('.images').append('<input type="file" name="fImages[]"><br/>');
+            });
+        })
     </script>
 @stop

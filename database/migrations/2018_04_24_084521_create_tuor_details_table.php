@@ -18,6 +18,8 @@ class CreateTuorDetailsTable extends Migration
             $table->string('name')->nullable();
             $table->string('starting_point')->nullable();
             $table->integer('price')->nullable();
+            $table->integer('cartegory_tour');
+            $table->integer('number_booking');
             $table->longText('content')->nullable();
             $table->date('date_start')->nullable();
             $table->string('image')->nullable();

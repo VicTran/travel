@@ -30,6 +30,9 @@
     <!--responsive.css -->
     <link href="{{asset('css/responsive.css')}}" rel="stylesheet" type="text/css">
 
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+
+
 </head>
 <body>
 @include('layouts.header')
@@ -58,6 +61,11 @@
 <script src="{{asset('js/jquery.slicknav.min.js')}}"></script>
 <!--main.js-->
 <script src="{{asset('js/main.js')}}"></script>
+
+<script src="js/sweetalert.js"></script>
+
+@include('Alerts::show')
+
 
 @yield('scripts')
 </body>

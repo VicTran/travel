@@ -2,11 +2,53 @@
 @section('title')
    Travel
 @endsection
+@section('slide-index')
+    <div class="slider-area slider-area-hp1 owl-carousel text-center">
+        <div class="single-slide-item hp1-slider-bg1" data-dot="<img src='{{asset('assets/img/hp1-slider-small1.jpg')}}' alt=''>">
+            <div class="single-slide-item-table-cell">
+                <div class="container">
+                    <div class="col-md-10 col-md-offset-1">
+                        <h1>Travel the world</h1>
+                        <p>Writers and stars of Veep have responded incredulously to the news an Australian politician</p>
+                        <a href="{{route('tours.index')}}" class="pink-btn">View All Tours</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="single-slide-item hp1-slider-bg2" data-dot="<img src='{{asset('assets/img/hp1-slider-small2.jpg')}}' alt=''>">
+            <div class="single-slide-item-table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h1>Travel the world</h1>
+                            <p>Writers and stars of Veep have responded incredulously to the news an Australian politician</p>
+                            <a href="{{route('tours.index')}}" class="pink-btn">View All Tours</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="single-slide-item hp1-slider-bg3" data-dot="<img src='{{asset('assets/img/hp1-slider-small3.jpg')}}' alt=''>">
+            <div class="single-slide-item-table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h1>Travel the world</h1>
+                            <p>Writers and stars of Veep have responded incredulously to the news an Australian politician</p>
+                            <a href="{{route('tours.index')}}" class="pink-btn">View All Tours</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
 @section('content')
     <div class="slider-bottom-form-carousel-area-hp1 padding-top">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" hidden>
                     <div class="slider-bottom-form-hp1">
                         <div class="slider-bottom-menu">
                             <ul class="nav nav-tabs" role="tablist">
@@ -88,7 +130,8 @@
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="profile">
                                 <div class="s-bottom-form">
-                                    <form action="http://static.crazycafe.net/crazycafe/travel/index.html" method="POST">
+                                    <form action="http://static.crazycafe.net/crazycafe/travel/index.html"
+                                          method="POST">
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <input type="text" id="hotel-name-input2" name="hotel-name2"
@@ -282,7 +325,7 @@
 
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <div class="slider-bottom-gallery-hp1 owl-carousel">
                         <div class="slider-bottom-single-gallery"
                              data-dot="<img src='assets/img/slider-bottom-hp1-gallery1.jpg' alt=''>">
@@ -303,8 +346,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <h1>Top điểm đến được yêu thích</h1>
-                        <p>Khám phá những chân trời mới</p>
+                        <h1>Top destinations in the world</h1>
+                        <p>Explore a different way to travel</p>
                     </div>
                 </div>
             </div>
@@ -315,31 +358,17 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="hp1-top-destination-carousel owl-carousel">
-                            <div class="single-top-destination-item top-destination-item-bg1 black-overlay">
-                                <div class="single-top-destination-item-inner">
-                                    <h2>New York</h2>
-                                    <a href="#" class="pink-btn">$1250</a>
+                            @foreach($tours as $tour)
+                                <div class="single-top-destination-item black-overlay"
+                                     style="background-image: url('{{$tour->image}}')">
+                                    <div class="single-top-destination-item-inner">
+                                        <a href="{{route('tours.show',['id'=>$tour->id])}}"><h2>{{$tour->name}}</h2></a>
+                                        <div  class="pink-btn">${{$tour->price}}</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-top-destination-item top-destination-item-bg2 black-overlay">
-                                <div class="single-top-destination-item-inner">
-                                    <h2>Thailand</h2>
-                                    <a href="#" class="pink-btn">$530</a>
-                                </div>
-                            </div>
-                            <div class="single-top-destination-item top-destination-item-bg3 black-overlay">
-                                <div class="single-top-destination-item-inner">
-                                    <h2>Paris</h2>
-                                    <a href="#" class="pink-btn">$750</a>
-                                </div>
-                            </div>
-                            <div class="single-top-destination-item top-destination-item-bg4 black-overlay">
-                                <div class="single-top-destination-item-inner">
-                                    <h2>Prague</h2>
-                                    <a href="#" class="pink-btn">$950</a>
-                                </div>
-                            </div>
-                            <div class="single-top-destination-item top-destination-item-bg3 black-overlay">
+                            @endforeach
+
+                            <div class="single-top-destination-item top-destination-item-bg3 black-overlay" hidden>
                                 <div class="single-top-destination-item-inner">
                                     <h2>Prague</h2>
                                     <a href="#" class="pink-btn">$950</a>
@@ -357,8 +386,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <h1>Các tours đi biển tuyệt vời nhất</h1>
-                        <p>Khám phá bãi biển tuyệt đẹp</p>
+                        <h1>The Best Sea Tours</h1>
+                        <p>Explore a different way to travel</p>
                     </div>
                 </div>
             </div>
@@ -369,105 +398,44 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="sea-tours-carousel-hp1-columns owl-carousel">
-                            <div class="single-sea-tours-item">
-                                <div class="single-sea-tours-image single-sea-tours-image1 black-overlay ">
-                                    <a href="#" class="pink-btn">$1500</a>
-                                    <h2>South America</h2>
-                                </div>
-                                <div class="single-sea-tours-text">
-                                    <h5><a href="tours-details.html">South America - 5 Days in Lake Tahoe</a></h5>
-                                    <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 5 Days</a>
+                            @foreach($seaTours as $seaTour)
+                                <div class="single-sea-tours-item">
+                                    <div class="single-sea-tours-image black-overlay " style="background-image: url('{{$seaTour->image}}')">
+                                        <a href="{{route('tours.show',['id'=>$tour->id])}}" class="pink-btn">${{$seaTour->price}}</a>
+                                        <h2>{{$seaTour->starting_point}}</h2>
+                                    </div>
+                                    <div class="single-sea-tours-text">
+                                        <h5><a href="{{route('tours.show',['id'=>$tour->id])}}">{{$seaTour->name}}</a></h5>
+                                        <span class="post-day-count">
+                                       <i class="zmdi zmdi-time"></i> {{$seaTour->days}} Days
                                     </span>
-                                    <span class="post-review-stars">
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline dark-star"></i></a>
-                                    </span>
-                                    <span class="post-review-count"><a href="#">(2 Reviews)</a></span>
+                                        <span class="post-review-stars">
+                                             @for ($i = 1; $i <= $seaTour->star; $i++)
+                                                <i class="zmdi zmdi-star-outline"></i>
+                                            @endfor
+                                        </span>
+                                        <span class="post-review-count">( {{ $seaTour->number_booking}} Reviews)</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-sea-tours-item">
-                                <div class="single-sea-tours-image single-sea-tours-image2 black-overlay">
-                                    <a href="#" class="pink-btn">$1150</a>
-                                    <h2>British Islands</h2>
-                                </div>
-                                <div class="single-sea-tours-text">
-                                    <h5><a href="tours-details.html">Islands - 7 Days in Popular Place</a></h5>
-                                    <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 7 Days</a>
-                                    </span>
-                                    <span class="post-review-stars">
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline dark-star"></i></a>
-                                    </span>
-                                    <span class="post-review-count"><a href="#">(5 Reviews)</a></span>
-                                </div>
-                            </div>
-                            <div class="single-sea-tours-item">
-                                <div class="single-sea-tours-image single-sea-tours-image3 black-overlay">
-                                    <a href="#" class="pink-btn">$1150</a>
-                                    <h2>Banff</h2>
-                                </div>
-                                <div class="single-sea-tours-text">
-                                    <h5><a href="tours-details.html">Banff - 3 Days in Popular Place</a></h5>
-                                    <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 3 Days</a>
-                                    </span>
-                                    <span class="post-review-stars">
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline dark-star"></i></a>
-                                    </span>
-                                    <span class="post-review-count"><a href="#">(3 Reviews)</a></span>
-                                </div>
-                            </div>
-                            <div class="single-sea-tours-item">
-                                <div class="single-sea-tours-image single-sea-tours-image2 black-overlay">
-                                    <a href="#" class="pink-btn">$1150</a>
-                                    <h2>British Islands</h2>
-                                </div>
-                                <div class="single-sea-tours-text">
-                                    <h5><a href="tours-details.html">Islands - 7 Days in Popular Place</a></h5>
-                                    <span class="post-day-count">
-                                        <a href="#"><i class="zmdi zmdi-time"></i> 7 Days</a>
-                                    </span>
-                                    <span class="post-review-stars">
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-star-outline dark-star"></i></a>
-                                    </span>
-                                    <span class="post-review-count"><a href="#">(5 Reviews)</a></span>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- <div class="weekend-europe-area">
+        <div class="weekend-europe-area">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h1>Weekend tour in Europe, Paris</h1>
-                        <h4>$350</h4>
-                        <p>Northern Ireland’s is now contingent. Britain is getting a divorce Northern Ireland is being
-                            offered a trial separation for Britain there is a one</p>
-                        <a href="tours.html" class="pink-btn">View more Tours</a>
+                        <h1>{{$seaTours[0]->name}}</h1>
+                        <h4>${{$seaTours[0]->price}}</h4>
+                        {!! $seaTours[0]->content !!}
+                        <a href="{{route("tours.show",['id'=>$seaTours[0]->id])}}" class="pink-btn">View more Tours</a>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <div class="padding-bottom footer-top-area">
@@ -526,8 +494,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
-                        <h1>Phản hồi khách hàng</h1>
-                        <!-- <p>Explore a different way to travel</p> -->
+                        <h1>Our Client Speech</h1>
+                        <p>Explore a different way to travel</p>
                     </div>
                 </div>
             </div>
