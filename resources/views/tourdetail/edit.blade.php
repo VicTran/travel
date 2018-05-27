@@ -26,16 +26,16 @@
 
                 <!-- text input -->
                 <div class="form-group">
-                    <label>Tên tour</label>
+                    <label>Name tour</label>
                     <input name="name" type="text" class="form-control" value="{{$tour->name}}">
                 </div>
                 <div class="form-group">
-                    <label>Địa điểm xuất phat</label>
+                    <label>Starting Point</label>
                     <input name="starting_point" type="text" class="form-control"
                            value="{{$tour->starting_point}}">
                 </div>
                 <div class="form-group">
-                    <label>Ngày xuất phát:</label>
+                    <label>Start date:</label>
 
                     <div class="input-group date">
                         <div class="input-group-addon">
@@ -47,7 +47,7 @@
                     <!-- /.input group -->
                 </div>
                 <div class="form-group">
-                    <label>Gia tour:</label>
+                    <label>Price tour:</label>
                     <div class="input-group">
                         <span class="input-group-addon">$</span>
                         <input name="price" type="number" class="form-control"
@@ -78,7 +78,7 @@
             <div class="col-md-12">
                 <div class="box box-danger">
                     <div class="box-header">
-                        <h3 class="box-title">Input masks</h3>
+                        <h3 class="box-title">Tour Detail</h3>
                     </div>
                     <div class="box-body">
                         <div id="option_product" class="container col-md-12">
@@ -90,7 +90,7 @@
                                     <a href="#detail" data-toggle="tab" class="hidden"> Detail </a>
                                 </li>
                                 <li>
-                                    <a href="#spec" data-toggle="tab"> Specs </a>
+                                    <a href="#spec" data-toggle="tab"> Description </a>
                                 </li>
                                 <li>
                                     <a href="#images" data-toggle="tab"> Image </a>
@@ -125,7 +125,7 @@
                                 <div class="tab-pane active" id="spec">
                                     <div class="specs">
                                         <div class="col-md-12">
-                                            <h4> Tab Specs </h4>
+                                            <h4> Description </h4>
                                             <textarea name="txtContent" class="form-control "
                                                       id="editor1">{{$tour->content}}</textarea>
                                         </div>
@@ -134,7 +134,7 @@
                                 <div class="tab-pane" id="images">
                                     <div class="col-md-6">
                                         <div class="form-group product_image">
-                                            <label>Product Images</label>
+                                            <label>Tour Images</label>
                                             <img src="{{url(''.$tour->image.'')}}" alt="{{$tour->image}}" width="150"
                                                  height="150"> <br/><br/>
                                             <input type="file" name="image"> <br/>

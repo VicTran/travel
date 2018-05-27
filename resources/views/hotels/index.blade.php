@@ -22,7 +22,7 @@
     <section class="content">
         <div class="row">
             <div class="col-xs-12" style="padding-bottom: 5px;">
-                <a href="{{route('hotel.create')}}" class="col-xs-2 btn btn-success btn-lg pull-right"> Tạo mới </a>
+                <a href="{{route('hotel.create')}}" class="col-xs-2 btn btn-success btn-lg pull-right">Create hotel</a>
             </div>
             <div class="col-xs-12">
                 @if(count($hotels) > 0)
@@ -69,7 +69,7 @@
                                     </td>
                                     <td>
                                         <a href="{{route('hotel.edit',['id' => $hotel->id])}}" class="btn btn-block btn-info btn-sm">
-                                            <i class="fa fa-edit"></i>Chinh sua
+                                            <i class="fa fa-edit"></i>Edit
                                         </a>
                                     </td>
                                     <td >

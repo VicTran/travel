@@ -1,15 +1,15 @@
 @extends('adminlte::page')
 
-@section('title', 'Tạo tour')
+@section('title', 'Create Tour')
 
 @section('content_header')
     <h1>
-        Danh sách tour
+        Create tour
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="{{ route('tour.index') }}"><i class="fa fa-dashboard"></i> Danh sách tour</a></li>
-        <li class="active">Tạo tour</li>
+        <li><a href="{{ route('tour.index') }}"><i class="fa fa-dashboard"></i> Create tour</a></li>
+        <li class="active">Create tour</li>
     </ol>
 @stop
 
@@ -26,17 +26,17 @@
 
                 <!-- text input -->
                 <div class="form-group">
-                    <label>Tên tour</label>
+                    <label>Name tour</label>
                     <input name="name" type="text" class="form-control"
-                           placeholder="Nhập vào tên chuyến đi(Nam Mỹ - 5 ngày ở hồ Tahoe)" value="{{old('name')}}">
+                           placeholder="input Name Tour(Nam Mỹ - 5 ngày ở hồ Tahoe)" value="{{old('name')}}">
                 </div>
                 <div class="form-group">
-                    <label>Địa điểm xuất phat</label>
+                    <label>Starting Point</label>
                     <input name="starting_point" type="text" class="form-control"
-                           placeholder="Nhập vào dia diem xuat phat (Ha Noi) ......">
+                           placeholder="input starting point (Ha Noi) ......">
                 </div>
                 <div class="form-group">
-                    <label>Ngày xuất phát:</label>
+                    <label>Start Date :</label>
 
                     <div class="input-group date">
                         <div class="input-group-addon">
@@ -47,11 +47,11 @@
                     <!-- /.input group -->
                 </div>
                 <div class="form-group">
-                    <label>Gia tour:</label>
+                    <label>Price tour:</label>
                     <div class="input-group">
                         <span class="input-group-addon">$</span>
                         <input name="price" type="number" class="form-control"
-                               placeholder="Nhap vao so tien : 100000 VND">
+                               placeholder="Input price : 10000 $">
                         <span class="input-group-addon">VND</span>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
             <div class="col-md-12">
                 <div class="box box-danger">
                     <div class="box-header">
-                        <h3 class="box-title">Input masks</h3>
+                        <h3 class="box-title">Detail Tours</h3>
                     </div>
                     <div class="box-body">
                         <div id="option_product" class="container col-md-12">
@@ -90,7 +90,7 @@
                                     <a href="#detail" data-toggle="tab" class="hidden"> Detail </a>
                                 </li>
                                 <li class="active">
-                                    <a href="#spec" data-toggle="tab"  > Specs </a>
+                                    <a href="#spec" data-toggle="tab"  > Description </a>
                                 </li>
                                 <li>
                                     <a href="#images" data-toggle="tab"> Image </a>
@@ -125,7 +125,7 @@
                                 <div class="tab-pane active" id="spec">
                                     <div class="specs">
                                         <div class="col-md-12">
-                                            <h4> Tab Specs </h4>
+                                            <h4> Description </h4>
                                             <textarea name="txtContent" class="form-control " id="editor1"></textarea>
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@
                                 <div class="tab-pane" id="images">
                                     <div class="col-md-6">
                                         <div class="form-group product_image">
-                                            <label>Product Images</label>
+                                            <label>Tour Images</label>
                                             <input type="file" name="image"> <br/>
                                         </div>
                                     </div>

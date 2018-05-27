@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Danh sách tour ')
+@section('title', 'List tours')
 @section('css')
     <link rel="stylesheet" href="{{asset('css/admin_custom.css')}}">
 
@@ -9,11 +9,11 @@
 
 @section('content_header')
         <h1>
-            Danh sách tour
+            List tours
         </h1>
         <ol class="breadcrumb">
             <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Danh sách tour</li>
+            <li class="active">List tours</li>
         </ol>
 @stop
 
@@ -22,12 +22,12 @@
     <section class="content">
         <div class="row">
             <div class="col-xs-12" style="padding-bottom: 5px;">
-                <a href="{{route('tour.create')}}" class="col-xs-2 btn btn-success btn-lg pull-right"> Tạo mới </a>
+                <a href="{{route('tour.create')}}" class="col-xs-2 btn btn-success btn-lg pull-right">Create Tour</a>
             </div>
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Danh sách tuor</h3>
+                        <h3 class="box-title">List Tours</h3>
 
                     </div>
                     <!-- /.box-header -->
@@ -36,19 +36,19 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Tên tour</th>
-                                <th>Giá tour</th>
-                                <th>Sô ngày </th>
-                                <th>Địa điểm xuất phát</th>
-                                <th>Chinh sua</th>
-                                <th>Xoa</th>
+                                <th>Tour Name</th>
+                                <th>Price</th>
+                                <th>Starting Point </th>
+                                <th>Created at</th>
+                                <th>Edit Tour</th>
+                                <th>Delete Tour</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach ($tours as $tour)
+                            @foreach ($tours as $key => $tour)
                                 <tr>
                                     <td>
-                                        {{$tour->id}}
+                                        {{$key +1 }}
                                     </td>
                                     <td>
                                         {{$tour->name}}
@@ -64,7 +64,7 @@
                                     </td>
                                     <td>
                                         <a href="{{route('tour.edit',['id' => $tour->id])}}" class="btn btn-block btn-info btn-sm">
-                                            <i class="fa fa-edit"></i>Chinh sua
+                                            <i class="fa fa-edit"></i>Edit
                                         </a>
                                     </td>
                                     <td >
