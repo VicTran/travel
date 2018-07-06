@@ -64,6 +64,20 @@
                     </select>
                 </div>
                 <div class="form-group">
+                    <label>Days Tour</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"> <span class="fa fa-times"></span></span>
+                        <input name="days" type="number" value="{{$tour->days}}" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Days Tour</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"> <span class="fa fa-star"></span></span>
+                        <input name="star" type="number" value="{{$tour->star}}"class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
                     <label>Number booking:</label>
                     <div class="input-group">
                         <span class="input-group-addon"> <span class="fa fa-user"></span></span>

@@ -13,7 +13,9 @@ class TuorDetail extends Model
         'content',
         'start_date',
         'cartegory_tour',
-        'number_booking'
+        'number_booking',
+        'days',
+        'star'
     ];
 
     public function saveTourDetail($tour)
@@ -25,6 +27,8 @@ class TuorDetail extends Model
         $this->date_start = $tour['start_date'];
         $this->cartegory_tour = $tour['cartegory_tour'];
         $this->number_booking = $tour['number_booking'];
+        $this->days = $tour['days'];
+        $this->star = $tour['star'];
         $this->save();
         return $this->id;
     }
@@ -37,6 +41,8 @@ class TuorDetail extends Model
         $this->date_start = $tour['start_date'];
         $this->cartegory_tour = $tour['cartegory_tour'];
         $this->number_booking = $tour['number_booking'];
+        $this->days = $tour['days'];
+        $this->star = $tour['star'];
         $this->save();
         return true;
     }

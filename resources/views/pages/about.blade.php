@@ -107,7 +107,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
-                        <h1>Rockstar Team</h1>
+                        <h1>Rockstar eam</h1>
                         <p>Explore a different way to travel</p>
                     </div>
                 </div>
@@ -123,63 +123,24 @@
                                 <div class="team-member-image team-member-image1">
                                     <div class="team-member-image-inner">
                                         <div class="team-member-socials">
-                                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                                             <a href="#"><i class="zmdi zmdi-facebook"></i></a>
                                             <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                            <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
                                         </div>
                                     </div>
                                 </div>
-                                <h4>Dixie Armstrong</h4>
-                                <p>CEO</p>
+                                <h4>Trần Thanh Tùng</h4>
+                                <p>Sinh viên lớp việt nhật A - K57</p>
                             </div>
                             <div class="single-team-member">
                                 <div class="team-member-image team-member-image2">
                                     <div class="team-member-socials">
                                         <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-twitter"></i></a>
                                         <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
                                     </div>
                                 </div>
-                                <h4>Katlynn Pouros</h4>
-                                <p>Marketing Manager</p>
-                            </div>
-                            <div class="single-team-member">
-                                <div class="team-member-image team-member-image3">
-                                    <div class="team-member-socials">
-                                        <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
-                                    </div>
-                                </div>
-                                <h4>Daphnee Schoen</h4>
-                                <p>Customer Support</p>
-                            </div>
-                            <div class="single-team-member">
-                                <div class="team-member-image team-member-image4">
-                                    <div class="team-member-socials">
-                                        <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
-                                    </div>
-                                </div>
-                                <h4>Norbert Wunsch</h4>
-                                <p>Europe Tour Expert</p>
-                            </div>
-                            <div class="single-team-member">
-                                <div class="team-member-image team-member-image8">
-                                    <div class="team-member-socials">
-                                        <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                        <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
-                                    </div>
-                                </div>
-                                <h4>Gerard Parisian</h4>
-                                <p>Europe Tour Expert</p>
+                                <h4>TS.Phạm Văn Hải </h4>
+                                <p>Chuyên gia CNTT,  WB, VINASA Ins., FIRST, Enzan In.t
+                                    Giảng viên, Bộ môn Hệ thống thông tin, viện Công nghệ Thông tin - Truyền Thông</p>
                             </div>
                         </div>
                     </div>
@@ -198,39 +159,6 @@
             </div>
         </div>
 
-        <div class="best-for-clients-columns text-center hp2-area-bg about-us-best-for-c">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="best-for-clients-single-item">
-                            <img src="assets/img/best-for-clients-pink-img-1.png" alt="">
-                            <h4>Best Destinations</h4>
-                            <p>West to Hebei and Heilon gjiang further east
-                                would be affectd by the air pollution betwen
-                                Visibility in Beijing had plummeted .</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="best-for-clients-single-item">
-                            <img src="assets/img/best-for-clients-pink-img-2.png" alt="">
-                            <h4>Best Price Guarantee</h4>
-                            <p>Significant slowdown in the rate of air quality
-                                improvement as a result of the ramping up of
-                                industrial activity around Beijing.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="best-for-clients-single-item">
-                            <img src="assets/img/best-for-clients-pink-img-3.png" alt="">
-                            <h4>Super Fast Booking</h4>
-                            <p>Concentrations of particulates such as PM10
-                                and PM2.5 had been linked to lung cancer an
-                                strokes Li the Greenpeace activist.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 @stop

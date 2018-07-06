@@ -118,7 +118,7 @@ return [
             'text'        => 'Tours',
             'url'         => 'admin/tours',
             'icon'        => 'file',
-            'label'       => 4,
+//            'label'       => 4,
             'label_color' => 'success',
         ],
         [

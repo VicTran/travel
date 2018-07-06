@@ -51,7 +51,7 @@
                     <div class="input-group">
                         <span class="input-group-addon">$</span>
                         <input name="price" type="number" class="form-control"
-                               placeholder="Input price : 10000 $">
+                               placeholder="Input price : 1000 $">
                         <span class="input-group-addon">VND</span>
                     </div>
                 </div>
@@ -60,8 +60,22 @@
                     <select class="form-control" name="cartegory_tour">
                         <option value="1"> Sea </option>
                         <option value="2">Mountain</option>
-                        <option value="3">ity</option>
+                        <option value="3">Relic</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <label>Days Tour</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"> <span class="fa fa-times"></span></span>
+                        <input name="days" type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Days Tour</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"> <span class="fa fa-star"></span></span>
+                        <input name="star" type="number" class="form-control">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Number booking:</label>

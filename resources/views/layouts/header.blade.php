@@ -37,10 +37,10 @@
                                     <li><a href="index-3.html">Hompage three</a></li>
                                 </ul> -->
                             </li>
-                            <li><a href="{{route('tours.index')}}">Tours</a>
-                            </li>
-                            <li><a href="{{route('page.about')}}">About</a></li>
+                            <li><a href="{{route('tours.index')}}">Tours</a></li>
+                            <li><a href="{{route('page.search')}}">Search Tour</a></li>
                             <li><a href="{{route('hotels.index')}}">Hotels</a></li>
+                            <li><a href="{{route('page.about')}}">About</a></li>
                         </ul>
                     </div>
                 </div>

@@ -270,7 +270,7 @@
         /* hp1-top-destination-carousel end*/
         /*team-member-carousel-about carousel Start*/
         $(".team-member-carousel-about").owlCarousel({
-            items: 4,
+            items: 2,
             loop: true,
             dots: false,
             nav: true,

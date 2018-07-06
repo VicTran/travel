@@ -16,7 +16,7 @@ class RuleController extends Controller
      */
     public function index()
     {
-        $rules = Rule::paginate(10);
+        $rules = Rule::orderBy('tour_id', 'desc')->paginate(10);
         $tours = TuorDetail::all();
         return view('admin.rules.index', compact('rules','tours'));
     }

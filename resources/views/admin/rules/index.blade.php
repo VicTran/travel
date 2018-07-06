@@ -106,7 +106,7 @@
                                         </td>
                                         <td>
                                             @foreach($tours as $tour)
-                                                @if($tour->id == $rule->id )
+                                                @if($rule->tour_id == $tour->id )
                                                     {{$tour->name}}
                                                 @endif
                                             @endforeach
