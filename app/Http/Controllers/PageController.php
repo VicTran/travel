@@ -117,4 +117,25 @@ class PageController extends Controller
         $tours = TuorDetail::all();
         return view('pages.search',compact('tours'));
     }
+
+    public function searchNormal(Request $request)
+    {
+        if(!empty($request->all()))
+        {
+            $rules = $request->all();
+            $rules = DB::table('tuor_details')->where('name','LIKE', '%' . $rules['nameTour'] . '%' )->get();
+
+            if(!empty($rules))
+            {
+                $tours = $rules;
+            }else
+            {
+                $tours = [];
+            }
+            return view('pages.searchNormal',compact('tours'));
+        }
+        $tours = TuorDetail::all();
+        return view('pages.searchNormal',compact('tours'));
+    }
+
 }

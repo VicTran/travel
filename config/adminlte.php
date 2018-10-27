@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin Setting Tour </b> ',
+    'logo' => '<b>Admin Manager Psychology  </b> ',
 
     'logo_mini' => '<b>A</b>LT',
 
@@ -108,42 +108,63 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
+        'Question',
+//        [
+//            'text' => 'Blog',
+//            'url'  => 'admin/blog',
+//            'can'  => 'manage-blog',
+//        ],
+//        [
+//            'text'        => 'Tours',
+//            'url'         => 'admin/tours',
+//            'icon'        => 'file',
+////            'label'       => 4,
+//            'label_color' => 'success',
+//        ],
+//        [
+//            'text'        => 'Customer',
+//            'url'         => 'admin/customers',
+//            'icon'        => 'user',
+//            'label_color' => 'success',
+//        ],
         [
-            'text' => 'Blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Question NEO',
+            'url'  => 'admin/question-neo',
+            'icon' => 'info',
         ],
         [
-            'text'        => 'Tours',
-            'url'         => 'admin/tours',
-            'icon'        => 'file',
-//            'label'       => 4,
-            'label_color' => 'success',
+            'text' => 'Question RIASEC',
+            'url'  => 'admin/question-riasec',
+            'icon' => 'question-circle',
         ],
         [
-            'text'        => 'Customer',
-            'url'         => 'admin/customers',
-            'icon'        => 'user',
-            'label_color' => 'success',
+            'text' => 'Question Difficult Psychology',
+            'url'  => 'admin/question-difficult-psychology',
+            'icon' => 'question-circle',
         ],
+
         
-        'ACCOUNT SETTINGS',
+        'SYSTEMS SETTINGS',
+//        [
+//            'text' => 'Car',
+//            'url'  => 'admin/cars',
+//            'icon' => 'car',
+//        ],
+//        [
+//            'text' => 'Hotel',
+//            'url'  => 'admin/hotels',
+//            'icon' => 'hotel',
+//        ],
+//        [
+//            'text' => 'Rules',
+//            'url'  => 'admin/rules',
+//            'icon' => 'cogs',
+//        ],
         [
-            'text' => 'Car',
-            'url'  => 'admin/cars',
-            'icon' => 'car',
-        ],
-        [
-            'text' => 'Hotel',
-            'url'  => 'admin/hotels',
-            'icon' => 'hotel',
-        ],
-        [
-            'text' => 'Rules',
-            'url'  => 'admin/rules',
+            'text' => 'Explain Question NEO',
+            'url'  => 'admin/explain-question-neo',
             'icon' => 'cogs',
-        ],
+        ]
 //        [
 //            'text' => 'Change Password',
 //            'url'  => 'admin/settings',

@@ -24,6 +24,8 @@ Route::group(['prefix' => 'pages'], function() {
     Route::get('/about', ['as' => 'page.about', 'uses' => 'PageController@about']);
     Route::get('/search', ['as' => 'page.search', 'uses' => 'PageController@search']);
     Route::post('/search', ['as' => 'page.search', 'uses' => 'PageController@search']);
+    Route::get('/searchNormal', ['as' => 'page.searchNormal', 'uses' => 'PageController@searchNormal']);
+    Route::post('/searchNormal', ['as' => 'page.searchNormal', 'uses' => 'PageController@searchNormal']);
 });
 
 Route::group(['prefix' => 'hotels'], function() {
@@ -85,6 +87,46 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/edit/{id}', ['as' => 'rules.edit', 'uses' => 'RuleController@edit']);
         Route::post('/edit/{id}', ['as' => 'rules.update', 'uses' => 'RuleController@update']);
         Route::get('/delete/{id}', ['as' => 'rules.delete', 'uses' => 'RuleController@destroy']);
+    });
+
+    Route::group(['prefix' => 'question-neo'], function() {
+        Route::get('/', ['as' => 'neo.index', 'uses' => 'QuestionNeoController@index']);
+        Route::get('/create', ['as' => 'neo.create', 'uses' => 'QuestionNeoController@create']);
+        Route::post('/', ['as' => 'neo.store', 'uses' => 'QuestionNeoController@store']);
+        Route::get('/edit/{id}', ['as' => 'neo.edit', 'uses' => 'QuestionNeoController@edit']);
+        Route::post('/edit/{id}', ['as' => 'neo.update', 'uses' => 'QuestionNeoController@update']);
+        Route::get('/delete/{id}', ['as' => 'neo.delete', 'uses' => 'QuestionNeoController@destroy']);
+        Route::post('{id}/remove/img', ['as' => 'neo.delete.img', 'uses' => 'QuestionNeoController@deleteImage']);
+    });
+
+    Route::group(['prefix' => 'question-riasec'], function() {
+        Route::get('/', ['as' => 'riasec.index', 'uses' => 'QuestionRiaSecController@index']);
+        Route::get('/create', ['as' => 'riasec.create', 'uses' => 'QuestionRiaSecController@create']);
+        Route::post('/', ['as' => 'riasec.store', 'uses' => 'QuestionRiaSecController@store']);
+        Route::get('/edit/{id}', ['as' => 'riasec.edit', 'uses' => 'QuestionRiaSecController@edit']);
+        Route::post('/edit/{id}', ['as' => 'riasec.update', 'uses' => 'QuestionRiaSecController@update']);
+        Route::get('/delete/{id}', ['as' => 'riasec.delete', 'uses' => 'QuestionRiaSecController@destroy']);
+        Route::post('{id}/remove/img', ['as' => 'riasec.delete.img', 'uses' => 'QuestionRiaSecController@deleteImage']);
+    });
+
+    Route::group(['prefix' => 'question-difficult-psychology'], function() {
+        Route::get('/', ['as' => 'psychology.index', 'uses' => 'QuestionDifficultPsychologyController@index']);
+        Route::get('/create', ['as' => 'psychology.create', 'uses' => 'QuestionDifficultPsychologyController@create']);
+        Route::post('/', ['as' => 'psychology.store', 'uses' => 'QuestionDifficultPsychologyController@store']);
+        Route::get('/edit/{id}', ['as' => 'psychology.edit', 'uses' => 'QuestionDifficultPsychologyController@edit']);
+        Route::post('/edit/{id}', ['as' => 'psychology.update', 'uses' => 'QuestionDifficultPsychologyController@update']);
+        Route::get('/delete/{id}', ['as' => 'psychology.delete', 'uses' => 'QuestionDifficultPsychologyController@destroy']);
+        Route::post('{id}/remove/img', ['as' => 'psychology.delete.img', 'uses' => 'QuestionDifficultPsychologyController@deleteImage']);
+    });
+
+    Route::group(['prefix' => 'explain-question-neo'], function() {
+        Route::get('/', ['as' => 'explainneo.index', 'uses' => 'ExplainQuestionNEOController@index']);
+        Route::get('/create', ['as' => 'explainneo.create', 'uses' => 'ExplainQuestionNEOController@create']);
+        Route::post('/', ['as' => 'explainneo.store', 'uses' => 'ExplainQuestionNEOController@store']);
+        Route::get('/edit/{id}', ['as' => 'explainneo.edit', 'uses' => 'ExplainQuestionNEOController@edit']);
+        Route::post('/edit/{id}', ['as' => 'explainneo.update', 'uses' => 'ExplainQuestionNEOController@update']);
+        Route::get('/delete/{id}', ['as' => 'explainneo.delete', 'uses' => 'ExplainQuestionNEOController@destroy']);
+        Route::post('{id}/remove/img', ['as' => 'explainneo.delete.img', 'uses' => 'ExplainQuestionNEOController@deleteImage']);
     });
 
 });

@@ -28,7 +28,7 @@
                         <a href="{{route('index')}}"><img src="{{asset('assets/img/logo.png')}}" alt=""></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-8">
+                <div class="col-md-8 col-sm-8">
                     <div class="mainmenu">
                         <ul id="slicknav-menu-list">
                             <li><a href="{{route('index')}}">Home</a>
@@ -38,7 +38,8 @@
                                 </ul> -->
                             </li>
                             <li><a href="{{route('tours.index')}}">Tours</a></li>
-                            <li><a href="{{route('page.search')}}">Search Tour</a></li>
+                            <li><a href="{{route('page.searchNormal')}}">Search Tour</a></li>
+                            <li><a href="{{route('page.search')}}">Search Advanced Tour</a></li>
                             <li><a href="{{route('hotels.index')}}">Hotels</a></li>
                             <li><a href="{{route('page.about')}}">About</a></li>
                         </ul>

@@ -34,7 +34,6 @@
                             <div class="single-sea-tours-item">
                                 <div class="single-sea-tours-image single-sea-tours-image1 black-overlay ">
                                     <a href="{{route('tours.show',['id'=>$tour->id])}}" class="pink-btn">${{$tour->price}}</a>
-                                    <h2>{{$tour->name}}</h2>
                                 </div>
                                 <div class="single-sea-tours-text">
                                     <a href="{{route('tours.show',['id'=>$tour->id])}}"> <h5>{{$tour->name}}</h5></a>
