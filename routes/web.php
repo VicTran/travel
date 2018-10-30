@@ -33,10 +33,11 @@ Route::group(['prefix' => 'hotels'], function() {
     Route::post('/show/{id}', ['as' => 'hotels.saveBook', 'uses' => 'HotelsController@saveBook']);
     Route::get('/show/{id}', ['as' => 'hotels.show', 'uses' => 'HotelsController@show']);
 });
-Route::get('/admin', 'HomeController@index')->name('home');
 Route::get('/tour', 'TourController@index')->name('tour');
 Route::get('/tour/detail', 'TourController@dd')->name('tour-detail');
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin','middleware' => ['role:superadministrator|administrator']], function () {
+
+    Route::get('/', 'HomeController@index')->name('home');
 
     Route::group(['prefix' => 'tours'], function() {
         Route::get('/', ['as' => 'tour.index', 'uses' => 'TuorDetailController@index']);
@@ -70,15 +71,15 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('{id}/remove/img', ['as' => 'car.delete.img', 'uses' => 'CarController@deleteImage']);
     });
 
-    Route::group(['prefix' => 'hotels'], function() {
-        Route::get('/', ['as' => 'hotel.index', 'uses' => 'HotelController@index']);
-        Route::get('/create', ['as' => 'hotel.create', 'uses' => 'HotelController@create']);
-        Route::post('/', ['as' => 'hotel.store', 'uses' => 'HotelController@store']);
-        Route::get('/edit/{id}', ['as' => 'hotel.edit', 'uses' => 'HotelController@edit']);
-        Route::post('/edit/{id}', ['as' => 'hotel.update', 'uses' => 'HotelController@update']);
-        Route::get('/delete/{id}', ['as' => 'hotel.delete', 'uses' => 'HotelController@destroy']);
-        Route::post('{id}/remove/img', ['as' => 'hotel.delete.img', 'uses' => 'Hotel@deleteImage']);
-    });
+//    Route::group(['prefix' => 'hotels'], function() {
+//        Route::get('/', ['as' => 'hotel.index', 'uses' => 'HotelController@index']);
+//        Route::get('/create', ['as' => 'hotel.create', 'uses' => 'HotelController@create']);
+//        Route::post('/', ['as' => 'hotel.store', 'uses' => 'HotelController@store']);
+//        Route::get('/edit/{id}', ['as' => 'hotel.edit', 'uses' => 'HotelController@edit']);
+//        Route::post('/edit/{id}', ['as' => 'hotel.update', 'uses' => 'HotelController@update']);
+//        Route::get('/delete/{id}', ['as' => 'hotel.delete', 'uses' => 'HotelController@destroy']);
+//        Route::post('{id}/remove/img', ['as' => 'hotel.delete.img', 'uses' => 'Hotel@deleteImage']);
+//    });
 
     Route::group(['prefix' => 'rules'], function() {
         Route::get('/', ['as' => 'rules.index', 'uses' => 'RuleController@index']);
@@ -89,7 +90,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/delete/{id}', ['as' => 'rules.delete', 'uses' => 'RuleController@destroy']);
     });
 
-    Route::group(['prefix' => 'question-neo'], function() {
+    Route::group(['prefix' => 'question-neo', 'middleware' => ['role:superadministrator']], function() {
         Route::get('/', ['as' => 'neo.index', 'uses' => 'QuestionNeoController@index']);
         Route::get('/create', ['as' => 'neo.create', 'uses' => 'QuestionNeoController@create']);
         Route::post('/', ['as' => 'neo.store', 'uses' => 'QuestionNeoController@store']);

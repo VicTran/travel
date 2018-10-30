@@ -164,7 +164,12 @@ return [
             'text' => 'Explain Question NEO',
             'url'  => 'admin/explain-question-neo',
             'icon' => 'cogs',
-        ]
+        ],
+        [
+        'text' => 'hgfgfhg hjgjhg ',
+        'url'  => 'admin/xxxxy',
+        'icon' => 'cogs',
+    ]
 //        [
 //            'text' => 'Change Password',
 //            'url'  => 'admin/settings',
